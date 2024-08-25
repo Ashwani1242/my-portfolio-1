@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Italiana&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+    cursor: none; */
+/* overflow-x: hidden;
+} */
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: floralwhite;
+    /* background-color: black; */
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+}
+
+.floralwhite {
+    color: floralwhite;
+}
+
+.bg-floralwhite {
+    background-color: floralwhite;
+}
+
+.mask {
+    mask-image: url("../public/mask.svg");
+    background-color: floralwhite;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.about-background {
+    background-image: url('../public/noise.svg');
+    background-color: #202020;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: indianred;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #202020;
+}
+
+.my-gradient {
+    mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 10%,
+        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.navbar-active{
+    background-color: black;
+    color: white ;
+    transition-duration: 500ms;
+    transition: all;
+}
+
+
+.large-circle, .small-circle {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 100;
+}
+
+.small-circle {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.grid-background {
+    background-color: #17171a;
+    background-image: linear-gradient(#212225 0.2em, transparent 0.2em),
+        linear-gradient(90deg, #212225 0.2em, transparent 0.2em);
+    background-size: 4em 4em;
+    animation: moveBackground 5s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 4em 4em;
+    }
+}
