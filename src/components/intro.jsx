@@ -35,7 +35,7 @@ const Intro = (props) => {
                 </div>
                 <p
                     className='lg:text-[50px] md:text-[40px] sm:text-[30px] text-[20px] text-black font-carattere'>
-                    {/* Software Developer */}
+                    Software Developer
                 </p>
             </motion.div>
             <motion.div
