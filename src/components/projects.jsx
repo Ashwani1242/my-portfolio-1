@@ -20,7 +20,7 @@ const Projects = (props) => {
             onMouseLeave={props.cursorDefault}
             className=' flex p-1 justify-center bg-floralwhite items-center cursor-default'>
             <section ref={targetRef} className="relative h-[1000vh] sm:h-[600vh] bg-transparent">
-                <div className="sticky top-0 h-screen bg-neutral-950 flex flex-col justify-around items-center group grid-background">
+                <div className="sticky top-0 h-screen bg-neutral-950 flex flex-col justify-around items-center grid-background">
                     {/* <img src="/images/background.jpg" alt="" className="-z-50 absolute object-cover w-full h-full overflow-auto group-hover:opacity-20 opacity-10 duration-500 group" /> */}
                     <svg className="w-full absolute opacity h-full opacity-20 -z-50" xmlns='http://www.w3.org/2000/svg'>
                         <filter id='noiseFilter'>
@@ -54,16 +54,17 @@ const Projects = (props) => {
                         {cards.map((card) => {
                             return <ProjectCard card={card} key={card.id} />;
                         })}
-                        <a href="https://github.com/Ashwani1242" target="_blank" className="bg-neutral-500/20 h-fit flex text-white py-4 px-6 ring-2 ring-neutral-300 rounded-xl cursor-pointer transition-all duration-300 hover:ring-indigo-400 hover:text-indigo-200 hover:scale-105">
-                            <div className="flex flex-col">
+                        <a href="https://github.com/Ashwani1242" target="_blank" className="bg-neutral-500/20 h-fit flex font-semibold text-white py-4 px-6 ring-1 ring-neutral-300 cursor-pointer transition-all duration-500 group relative">
+                            <div className="flex flex-col z-20 group-hover:text-black  duration-500">
                                 <span className="text-nowrap">More Projects</span>
                                 <span className="text-nowrap">on Github</span>
                             </div>
                             <div className="flex justify-center items-center pl-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 z-20 group-hover:text-black  duration-500">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                                 </svg>
                             </div>
+                            <div className='absolute inset-0 bg-floralwhite w-0 group-hover:w-full z-10 duration-500' />
                         </a>
                     </motion.div>
                 </div>
